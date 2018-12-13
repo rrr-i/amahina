@@ -1,0 +1,200 @@
+$tra3 = .3s 
+$yellow = #E9CD4C
+$red = #CC543A
+$white = #FCFAF2
+$black = #3A3226
+
+body
+  background $yellow
+  -webkit-font-smoothing antialiased
+#bg-black
+  display none
+  position fixed
+  top 0
+  width 100%
+  height 100%
+  background rgba(0,0,0,.3)
+  z-index 500
+// ハンバーガーメニュー
+.hamburger
+  position absolute
+  top 45px
+  left 20px
+  width 40px
+  transition $tra3
+  opacity 0
+.hamburger-small
+  top 18px
+  opacity 1
+  .border
+    display block
+    width 100%
+    height 4px
+    background $red
+    border-radius 2px
+    transition .4s
+.border
+  display block
+  width 100%
+  height 4px
+  background $black
+  transition .4s
+.border-active:nth-child(1)
+  transform translateY(12px) rotate(220deg)
+  transition .4s
+.border-active:nth-child(2)
+  opacity 0
+  transition .4s
+.border-active:nth-child(3)
+  transform translateY(-12px) rotate(-220deg)
+  transition .4s
+.border:not(last-child)
+  margin 0 0 8px 0
+// ナビゲーション
+.header-inner
+  position absolute
+  top 0
+  width 100%
+  height 100px
+  background $yellow
+  transition $tra3
+  box-sizing border-box
+  z-index 1000
+  h1
+    padding 40px 0 0 0
+    font-size 3em
+    text-align center
+    transition $tra3
+// ヘッダースモール
+.header-small
+  position fixed
+  width 100%
+  height 60px
+  background $yellow
+  transition $tra3
+  z-index 1000
+  h1
+    padding 22px 0 0 0
+    font-size 1.6em
+    text-align center
+    transition $tra3
+// ナビゲーション
+nav.pc_nav
+  display none
+// スライドトグルメニュー
+nav.sp_nav
+  position fixed
+  top 100px
+  display none
+  width 100%
+  background $yellow
+  z-index 1000
+  li
+    letter-spacing 0.05em
+    line-height 2.8em
+    font-size 1.4em
+    font-weight bold
+    text-align center
+    border-bottom 1px solid $black
+    a
+      display block
+      color $black
+      text-decoration none
+nav.nav-small-fix
+  position fixed
+  top 60px
+  width 100%
+  background $yellow
+
+// メインコンテンツ
+main
+  display block
+  width 100%
+#main-content
+  padding 100px 0  0 0
+  // スライダー
+  #slidewrap
+    width 100%
+    height auto
+    overflow hidden
+  #slider
+    position relative
+    display flex
+    align-items center
+    flex-wrap nowrap
+    width 300%
+    .imgbox
+      width 100%
+      height auto
+      background $yellow
+      img
+        width 100%
+    .imgbox:nth-child(2)
+      background red
+    .imgbox:nth-child(3)
+      background blue
+h2.section-title
+  position relative
+  display block
+  width 250px
+  margin 0 auto
+  background $yellow
+  font-size 2em
+  text-align center
+  z-index 10
+// ニュースコンテンツ
+main section
+  width 100%
+  padding 50px 0 20px 0
+#news-content
+  ul
+    width 90%
+    margin -10px auto 0
+    padding 30px 25px 20px
+    border 4px double $red
+    box-sizing border-box
+    li
+      font-size 14px
+      margin-bottom 10px
+      letter-spacing 0.05em
+      line-height 1.75em
+      text-align left
+      list-style-type none
+    li::before
+      font-family "Font Awesome 5 Free"
+      content "\f044"
+      margin 0 4px 0 0
+      font-weight 900
+      font-size 12px
+      color $red
+    li:first-child::before
+      content "新着!"
+      margin 0 4px 0 0
+      color $red
+      font-size 12px
+      border-bottom 4px double $red
+#characters-content
+  .character_box
+    display block
+    width 100%
+    margin 40px 0 0 0
+    figure
+      width 100%
+      text-align center
+      img
+        width 80%
+    figcaption
+      width 90%
+      margin 0 auto
+      font-size 14px
+@media screen and (min-width 768px)
+  body
+    // background white
+
+// フッター
+footer
+  width 100%
+  line-height 40px
+  background $red
+  p
+    text-align center
