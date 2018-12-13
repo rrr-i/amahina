@@ -1,3 +1,148 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote before,
+blockquote after,
+q before,
+q after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
 body {
   background: #e9cd4c;
   -webkit-font-smoothing: antialiased;
@@ -160,6 +305,23 @@ main section {
   width: 100%;
   padding: 50px 0 20px 0;
 }
+#characters-content .character_box {
+  display: block;
+  width: 100%;
+  margin: 40px 0 0 0;
+}
+#characters-content .character_box figure {
+  width: 100%;
+  text-align: center;
+}
+#characters-content .character_box figure img {
+  width: 80%;
+}
+#characters-content .character_box figcaption {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 14px;
+}
 #news-content ul {
   width: 90%;
   margin: -10px auto 0;
@@ -189,23 +351,6 @@ main section {
   color: #cc543a;
   font-size: 12px;
   border-bottom: 4px double #cc543a;
-}
-#characters-content .character_box {
-  display: block;
-  width: 100%;
-  margin: 40px 0 0 0;
-}
-#characters-content .character_box figure {
-  width: 100%;
-  text-align: center;
-}
-#characters-content .character_box figure img {
-  width: 80%;
-}
-#characters-content .character_box figcaption {
-  width: 90%;
-  margin: 0 auto;
-  font-size: 14px;
 }
 footer {
   width: 100%;

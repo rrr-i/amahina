@@ -1,101 +1,17 @@
 doctype html
 html(lang="ja")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width,initial-scale=1")
-    title template
-    link(rel="stylesheet", href="./css/reset.css")
-    link(rel="stylesheet", href="./css/index.css")
-    link(rel="stylesheet", href="./css/common.css")
-    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous")
+  
+  include include/head
 
   body
     #bg-black
     #mainwrap
-      header
-        .header-inner
-          div.hamburger
-            span.border
-            span.border
-            span.border
-          h1 AmaHima
-          nav.pc_nav
-            ul
-              li
-                a(href="#") Top Page
-              li
-                a(href="#") Link
-              li
-                a(href="#") Getting Ready
-              li
-                a(href="#") Getting Ready
-        nav.sp_nav
-          ul
-            - 
-              var list = [
-                {
-                  title: "Top Page",
-                  url: "top.html"
-                },
-                {
-                  title: "Link",
-                  url: "link.html"
-                },
-                {
-                  title: "Contact",
-                  url: "contact.html"
-                },
-              ]
-            each item in list
-              li: a(href=item.url) #{item.title}
-      main
-        #main-content
-          #slidewrap
-            #slider
-              .slider-image01.imgbox
-                img(src="./images/AmaHima_Header.jpg", alt="")
-              .slider-image02.imgbox
-              .slider-image03.imgbox
-          section#news-content
-            h2.section-title AmaHima NEWS
-            ul
-              li
-                a 2018/11/10 あまひまChannel開設！
-              li
-                a 2018/11/10 あまひまHomePage開設！
-              li
-                a 2018/11/10 あまひまグッズ夏コミ３日目にて販売決定！
-          section#characters-content
-            h2.section-title AmaHima?!
-            .character_box.ama
-              figure
-                img(src="./images/Ama.png" alt="Ama")
-                figcaption Ama
-                  br
-                  | 年齢：Test
-                  br
-                  | 好きなもの：Test
-                  br
-                  | ひとこと：Test
-            .character_box.hima
-              figure
-                img(src="./images/Hima.png" alt="Ama")
-                figcaption Hima
-                  br
-                  |年齢：Test
-                  br
-                  |好きなもの：Test
-                  br
-                  | ひとこと：Test
-            .youtube_link
-              .link-wrap
-            .youtube_link
-              .link-wrap
-                iframe(width="560" height="315" src="http://www.youtube.com/embed?listType=user_uploads&list=ONEOKROCKchannel" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-                iframe(width="560" height="315" src="http://www.youtube.com/embed?listType=playlists&list=PL8ADA9D1C464A4F16" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-                iframe(width="560" height="315" src="http://www.youtube.com/embed?listType=playlists&list=PL2059CFFC5E5CCDC3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-      footer
-        p copyright
+
+      include include/header
+              
+      include include/mainparts
+        
+      include include/footer
+
     script(src="./js/jquery-3.2.1.min.js")
     script(src="./js/main.js")

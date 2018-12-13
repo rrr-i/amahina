@@ -1,0 +1,36 @@
+header
+  .header-inner
+    div.hamburger
+      span.border
+      span.border
+      span.border
+    h1 AmaHima
+    nav.pc_nav
+      ul
+        li
+          a(href="#") Top Page
+        li
+          a(href="#") Link
+        li
+          a(href="#") Getting Ready
+        li
+          a(href="#") Getting Ready
+  nav.sp_nav
+    ul
+      - 
+        var list = [
+          {
+            title: "Top Page",
+            url: "top.html"
+          },
+          {
+            title: "Link",
+            url: "link.html"
+          },
+          {
+            title: "Contact",
+            url: "contact.html"
+          },
+        ]
+      each item in list
+        li: a(href=item.url) #{item.title}
