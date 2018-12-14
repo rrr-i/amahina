@@ -1,55 +1,71 @@
 main
-        #main-content
-          //- #slidewrap
-          //-   #slider
-          //-     .slider-image01.imgbox
-          //-       img(src="./images/AmaHima_Header.jpg", alt="")
-          //-     .slider-image02.imgbox
-          //-     .slider-image03.imgbox
-          .section-wrap
-            section.characters-content
-              .ama-inner
-                h2.amari-title 風神
-                  br
-                  |アマリ
-                ul
-                  li 出身 - 京都
-                  li 年齢 - 394歳
-                  li 誕生 - 11月22日
-                p.twitter-sns
-                  a(href="#") Twitter 
-                    i.fab.fa-twitter
-              .character_box.ama
-                figure
-                  img(src="./images/Ama.png" alt="Ama")
-            section.characters-content
-              .character_box.hima
-                figure
-                  img(src="./images/Hima.png" alt="Ama")
-                .hima-inner
-                  h2.himari-title 雷神　
-                    br
-                    |ヒマリ
-                  ul
-                    li 出身 - 京都
-                    li 年齢 - 394歳
-                    li 誕生 - 11月22日
-                  p.twitter-sns 
-                    a(href="#"): i.fab.fa-twitter
-              
-            section#news-content
-              h2.section-title Amahima NEWS
-              ul
-                li
-                  a 2018/11/10 あまひまChannel開設！
-                li
-                  a 2018/11/10 あまひまHomePage開設！
-                li
-                  a 2018/11/10 あまひまグッズ夏コミ３日目にて販売決定！
-              .youtube_link
-                .link-wrap
-              .youtube_link
-                .link-wrap
-                  iframe(width="560" height="315" src="http://www.youtube.com/embed?listType=user_uploads&list=ONEOKROCKchannel" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-                  iframe(width="560" height="315" src="http://www.youtube.com/embed?listType=playlists&list=PL8ADA9D1C464A4F16" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-                  iframe(width="560" height="315" src="http://www.youtube.com/embed?listType=playlists&list=PL2059CFFC5E5CCDC3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+  #main-content
+    //- #slidewrap
+    //-   #slider
+    //-     .slider-image01.imgbox
+    //-       img(src="./images/AmaHima_Header.jpg", alt="")
+    //-     .slider-image02.imgbox
+    //-     .slider-image03.imgbox
+    .top-content
+      .top-content-bg
+      .top-content-inner
+        p.bigtext 地上で
+          br
+          |「ユーチューバー」
+          p お空の 
+            span ｢神様｣
+            |は、
+          p.captext 二人の新たなる
+            span 挑戦
+            |が始まる!
+        .top-content-imgbox
+          figure.top-content-img.hima
+            img(src="./images/Himaのコピー.png" alt="Ama")
+            figcaption 雷神ヒマリ
+          figure.top-content-img.ama
+            img(src="./images/Amaのコピー.png", alt="ama")
+            figcaption 風神アマリ
+    .section-wrap
+      section#amari-content.characters-content
+        .ama-inner
+          h2.amari-title 風神
+            br
+            |アマリ
+          ul
+            li 出身 - 京都
+            li 年齢 - 394歳
+            li 誕生 - 11月22日
+          p.twitter-sns
+            a(href="#")
+              i.fab.fa-twitter
+        .character_box.ama
+          figure
+            img(src="./images/Ama.png" alt="Ama")
+      section#himari-content.characters-content
+        .character_box.hima
+          figure
+            img(src="./images/Hima.png" alt="Ama")
+          .hima-inner
+            h2.himari-title 雷神　
+              br
+              |ヒマリ
+            ul
+              li 出身 - 京都
+              li 年齢 - 394歳
+              li 誕生 - 11月22日
+            p.twitter-sns 
+              a(href="#"): i.fab.fa-twitter
+                
+      section#news-content
+        h2.section-title Amahima NEWS
+        ul
+          li
+            a 2018/11/10 あまひまChannel開設！
+          li
+            a 2018/11/10 あまひまHomePage開設！
+          li
+            a 2018/11/10 あまひまグッズ夏コミ３日目にて販売決定！
+        .youtube_link
+          .link-wrap
+        .youtube_link
+          .link-wrap

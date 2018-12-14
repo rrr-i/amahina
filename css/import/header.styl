@@ -1,84 +1,73 @@
-#bg-black
-  display none
-  position fixed
-  top 0
-  width 100%
-  height 100%
-  background rgba(0,0,0,.3)
-  z-index 500
-// ハンバーガーメニュー
-.hamburger
-  position absolute
-  top 45px
-  left 20px
-  width 40px
-  transition $tra3
-  opacity 0
-.hamburger-small
-  top 18px
-  opacity 1
-  .border
-    display block
-    width 100%
-    height 4px
-    background $red
-    border-radius 2px
-    transition .4s
-.border
-  display block
-  width 100%
-  height 4px
-  background $black
-  transition .4s
-.border-active:nth-child(1)
-  transform translateY(12px) rotate(220deg)
-  transition .4s
-.border-active:nth-child(2)
-  opacity 0
-  transition .4s
-.border-active:nth-child(3)
-  transform translateY(-12px) rotate(-220deg)
-  transition .4s
-.border:not(last-child)
-  margin 0 0 8px 0
+
+@import "import/hamburger.styl"
+
 // ナビゲーション
-.header-inner
-  position absolute
-  top 0
+header
+  position relative
   width 100%
-  height 100px
-  background $yellow
+  height 175px
+.header-inner
+  width 1100px
+  margin 0 auto
+  background transparent
   transition $tra3
   box-sizing border-box
-  z-index 1000
   h1
     padding 40px 0 0 0
-    font-size 3em
+    font-size 4em
     text-align center
     transition $tra3
+    a
+      color $black
+      text-decoration none
 // ヘッダースモール
 .header-small
   position fixed
-  width 100%
+  top 0
+  left 0
+  right 0
+  width 1100px
   height 60px
-  background $yellow
-  transition $tra3
   z-index 1000
   h1
-    padding 22px 0 0 0
-    font-size 1.6em
-    text-align center
+    padding 30px 0 0 0
+    font-size 2.5em
     transition $tra3
+
 // ナビゲーション
 nav.pc_nav
+  display block
+  width 100%
+  height auto
+  margin-top 30px
+  ul
+    display flex
+    align-items center
+    justify-content space-between
+    li
+      width 20%
+      text-align center
+      a
+        padding 10px
+        color $black
+        font-size 1em
+        text-decoration none
+nav.sp_nav
   display none
+
+@media screen and (max-width: 768px)
+  nav.pc_nav
+    display none
+  nav.sp_nav
+    display block
+
 // スライドトグルメニュー
 nav.sp_nav
   position fixed
   top 100px
   display none
   width 100%
-  background $yellow
+  background $white
   z-index 1000
   li
     letter-spacing 0.05em
@@ -95,4 +84,12 @@ nav.nav-small-fix
   position fixed
   top 60px
   width 100%
-  background $yellow
+  background $white
+#bg-black
+  display none
+  position fixed
+  top 0
+  width 100%
+  height 100%
+  background rgba(0,0,0,.3)
+  z-index 500

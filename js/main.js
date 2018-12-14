@@ -1,19 +1,24 @@
 // JavaScript Document
 $(function(){
   
-  $("a").click(function(){
-    return false;
-  });
 
   var small = $("header").offset().top;
   $(window).scroll(function(){
     if($(window).scrollTop() > small){
       $(".hamburger").addClass("hamburger-small"),
       $(".header-inner").addClass("header-small"),
+      $(".pc_nav").css({
+        opacity: "0",
+        transition: ".3s"
+      });
       $(".sp_nav").addClass("nav-small-fix");
     }else{
       $(".hamburger").removeClass("hamburger-small"),
       $(".header-inner").removeClass("header-small"),
+      $(".pc_nav").css({
+        opacity: "1",
+        transition: ".3s"
+      });
       $(".sp_nav").removeClass("nav-small-fix");
     }
   });

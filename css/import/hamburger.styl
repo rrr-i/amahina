@@ -1,0 +1,39 @@
+.hamburger
+  display none
+@media screen and (max-width 768px)
+  // ハンバーガーメニュー
+  .hamburger
+    position absolute
+    top 45px
+    left 20px
+    display block
+    width 40px
+    transition $tra3
+    opacity 0
+  .hamburger-small
+    top 18px
+    opacity 1
+    .border
+      display block
+      width 100%
+      height 4px
+      background $red
+      border-radius 2px
+      transition .4s
+  .border
+    display block
+    width 100%
+    height 4px
+    background $black
+    transition .4s
+  .border-active:nth-child(1)
+    transform translateY(12px) rotate(220deg)
+    transition .4s
+  .border-active:nth-child(2)
+    opacity 0
+    transition .4s
+  .border-active:nth-child(3)
+    transform translateY(-12px) rotate(-220deg)
+    transition .4s
+  .border:not(last-child)
+    margin 0 0 8px 0
