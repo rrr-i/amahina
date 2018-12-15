@@ -7,6 +7,7 @@ $(function(){
     if($(window).scrollTop() > small){
       $(".hamburger").addClass("hamburger-small"),
       $(".header-inner").addClass("header-small"),
+      $(".header-inner h1 a").text("AmaHima");
       $(".pc_nav").css({
         opacity: "0",
         transition: ".3s"
@@ -15,6 +16,7 @@ $(function(){
     }else{
       $(".hamburger").removeClass("hamburger-small"),
       $(".header-inner").removeClass("header-small"),
+      $(".header-inner h1 a").text("あまひま！");
       $(".pc_nav").css({
         opacity: "1",
         transition: ".3s"
