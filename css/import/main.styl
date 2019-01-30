@@ -45,15 +45,15 @@ main
     width 100%
     height 720px
     z-index -1
-  p.bigtext
+  span.bigtext
     position absolute
-    top 11%
+    top 15%
     left 0
     right 0
     background url(../images/hude.png) no-repeat center bottom
     background-size contain
-    letter-spacing: -10px
-    font-size 10em
+    letter-spacing -10px
+    font-size 2.9em
     font-style italic
     font-family "font-catch"
     transform rotate(-10deg)
@@ -62,15 +62,6 @@ main
       font-size .7em
   span.fs-15
     font-size 1.1em
-  p.captext
-    position absolute
-    top 70%
-    left 0
-    font-size 3em
-    span
-      font-size 1.4em
-      background url(../images/hude2.png) no-repeat center bottom
-      background-size contain
   &-inner
     position relative
     width 1200px
@@ -78,10 +69,23 @@ main
     margin 0 auto
     padding 50px 0 0 0
     box-sizing border-box
-    p
+    h2
       font-size 3.5em
       font-style normal
+      font-weight normal
       font-family "font-catch"
+  p.captext
+    position absolute
+    top 70%
+    left 0
+    font-size 3.5em
+    font-style normal
+    font-weight normal
+    font-family "font-catch"
+    span
+      font-size 1.4em
+      background url(../images/hude2.png) no-repeat center bottom
+      background-size contain
   .top-content-imgbox
     position absolute
     top -6%
@@ -92,79 +96,116 @@ main
       margin -350px 0 0 80px
 
 .section-wrap
-  width 100%;
+  width 100%
   height auto
-  margin 200px auto 0
+  margin 0 auto
   background linear-gradient(20deg,$yellow 30%,transparent 30%)
-  h2
+  h2,h3.section-title
     display block
+    margin-top 50px
     color $black
     font-size 3em
     font-weight 100
     text-align center
     z-index 10
-    font-family "font"  
-.flex-box
+    font-family "font"
+    font-weight bold
+.flex-wrap
   display flex
   width 1200px
   margin 0 auto
-.characters-content
-  position relative
-  width 1100px
-  margin 0 auto
-  .character_box
-    width 30%
-    figure
+  .c-wrap
+    width 50%
+  .characters-content
+    position relative
+    margin 0 auto
+    .character_box
       width 100%
+      text-align center
+      span
+        display block
+        height 550px
       img
+        width 400px
+      figcaption
         width 100%
-    figcaption
-      width 100%
-      margin 0 auto
-      font-size 1em
-h3.amari-title,
-h3.himari-title
-  display block
-  color $black
-  font-size 5em
-  font-weight bold
-  text-align left
-  z-index 10
-  font-family "font"
+        text-align center
+        font-size 1em
+  .amari-title,
+  .himari-title
+    display block
+    color $black
+    font-size 5em
+    font-weight bold
+    z-index 10
+    font-family "font"
 .ama-inner
   ul
     margin-top 20px
     font-family "font"
     li
-      font-size 2.6em
-      line-height 1.75em
+      font-size 2em
+      line-height 1.5em
       list-style-type none
-  .twitter-sns a
-    display block
-    width 50px
-    line-height 50px
-    background $red
-    color $white
-    font-size: 1.1em
-    text-align center
-    border-radius 50%
-    text-decoration none
 .hima-inner
   @extends .ama-inner
-  
+
+.twitter-sns a
+  position: absolute
+  top 20%
+  left 20%
+  display block
+  width 60px
+  line-height 60px
+  background $red
+  color $white
+  font-size 1.8em
+  text-align center
+  border-radius 50%
+  text-decoration none
+  transition .4s
+.twitter-sns:hover a
+  box-shadow 0 0 0 12px rgba($red, 0.3)
+  transition .3s
+.twitter-sns:hover + .twitter-caption
+  opacity 1
+.twitter-caption
+  opacity 0
+  position absolute
+  top 15%
+  left 14.2%
+  background $red
+  color $white
+  padding 5px 10px
+  border-radius 5px
+  font-weight bold
+  transition .25s
+  &::after
+    position absolute
+    top 85%
+    left 50%
+    transform translate(-50%,0)
+    content "▼"
+    color $red
+
+// 質問コーナー
 .question-content
-  width 1100px
+  width 100%
   margin 0 auto 0
   display block
-  h3
+  h4
     text-align center
+    font-size 1.6em
   ul
-    li:nth-child(even)
+    display none
+    width 300px
+    margin 0 auto
+    li
       list-style-type none
 
 // ニュースコンテンツ
 #news-content
-  width 1100px
+  width 800px
   margin 0 auto
   position relative
   ul
@@ -185,9 +226,18 @@ h3.himari-title
       font-weight 900
       font-size 12px
       color $red
-    li:first-child::before
+    li:first-child::after
       content "新着!"
       margin 0 4px 0 0
       color $red
-      font-size 12px
+      font-size 14px
+      font-weight bold
       border-bottom 4px double $red
+.youtube-wrap
+  width 1200px
+  margin 100px auto 0
+  .link-wrap
+    display flex
+    justify-content space-between
+  iframe 
+    width 45%

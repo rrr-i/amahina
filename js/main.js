@@ -41,6 +41,9 @@ $(function(){
     $(".sp_nav").slideToggle();
     $(".border").removeClass("border-active");
   });
-
+  
+  $(".question-content h4").on("click",function(){
+    $(".question-content ul").slideToggle();
+  });
 
 });
